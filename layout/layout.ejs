@@ -1,0 +1,66 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+
+<!DOCTYPE html>
+<html lang="<%=config.language%>">
+<head>
+  <meta charset="UTF-8">
+  <title><%=pageTitle%></title>
+  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
+    <!-- stylesheets list from config.yml -->
+    <% theme.stylesheets.forEach(function(url) { %>
+      <link rel="stylesheet" href="<%=url%>">
+    <% }); %>
+  <% } %>
+</head>
+<body>
+<div class="container paper">
+  <header class="row flex-edges navigator">
+    <h1 class="sm-4"><%=config.title%></h1>
+
+    <nav class="sm-4 col">
+      <div class="row flex-spaces">
+        <% Object.keys(theme.menu).forEach(function(key) { %>
+          <a href="<%=theme.menu[key]%>" class="paper-btn btn-small"><%=key%></a>
+        <% }); %>
+      </div>
+    </nav>
+  </header>
+
+  <div id="content-outer">
+    <div id="content-inner">
+      <%- body %>
+    </div>
+  </div>
+
+  <footer class="wgt-footer">
+    <p class="mt0 pb1">
+      &copy; 2014-2017 <%=config.title%> | 
+      <% Object.keys(theme.social).forEach(function(key) { %>
+        <a href="<%=theme.social[key]%>"><%=key%></a>&nbsp;|&nbsp;
+      <% }); %>
+    </p>
+    <p class="mt0 pb1">
+      <% if (theme.license) { %><%=theme.license%><% } %>
+      Powered by <a href="http://hexo.io">Hexo</a>, themed by <a href="#">Paper</a>.
+    </p>
+  </footer>
+</div>
+
+<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
+  <!-- scripts list from theme config.yml -->
+  <% theme.scripts.forEach(function(url) { %>
+    <script src="<%=url%>"></script>
+  <% }); %>
+<% } %>
+
+</body>
+</html>

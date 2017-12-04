@@ -1,0 +1,29 @@
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  About: /about
+  Archives: /archives
+
+social:
+  github: https://github.com/YuyingWu
+  weibo: http://www.weibo.com/wuyuying1128
+  douban: http://www.douban.com/people/wuyuying1128
+
+license: 京ICP备16019960号
+
+# Miscelaneous
+favicon: /favicon.ico
+
+# stylesheets loaded in the <head>
+stylesheets:
+- /css/paper.lib.css
+- /css/basscss.lib.css
+- /css/index.css
+
+# scripts loaded in the end of the body
+scripts:
+- /js/test.js
