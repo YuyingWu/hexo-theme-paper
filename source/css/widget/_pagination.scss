@@ -1,0 +1,28 @@
+.prev,
+.next,
+.page-number{
+  align-self: center;
+  background: 0 0;
+  color: #41403e;
+  outline: 0;
+  border: solid 2px #41403e;
+  border: 2px solid #41403e;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  border-bottom-right-radius: 225px 15px;
+  border-bottom-left-radius: 15px 255px;
+  font-size: 1rem;
+  padding: .75rem .75rem;
+  cursor: pointer;
+  box-shadow: 10px 19px 17px -13px rgba(0,0,0,.2);
+  transition: all .5s ease;
+  display: inline-block;
+  margin: 2rem 0;
+  margin-right: .5rem;
+  &.next{
+    margin-right: 0;
+  }
+  &:hover{
+    box-shadow: 2px 8px 4px -6px rgba(0,0,0,.3);
+  }
+}
