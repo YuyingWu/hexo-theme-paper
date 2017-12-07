@@ -13,6 +13,8 @@ pageTitle += ' [ ' + config.title + ' ]';
 <html lang="<%=config.language%>">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title><%=pageTitle%></title>
   <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
     <!-- stylesheets list from config.yml -->
@@ -22,13 +24,13 @@ pageTitle += ' [ ' + config.title + ' ]';
   <% } %>
 </head>
 <body>
-<div class="container paper">
-  <header class="row flex-edges navigator">
-    <h1 class="sm-4">
+<div class="container">
+  <header class="clearfix row flex-edges flex-middle navigator">
+    <h1 class="col-4 lg-6">
       <a href="<%=config.root%>"><%=config.title%></a>
     </h1>
 
-    <nav class="sm-4 col">
+    <nav class="menu col-8 lg-6">
       <div class="row flex-spaces">
         <% Object.keys(theme.menu).forEach(function(key) { %>
           <a href="<%=theme.menu[key]%>" class="paper-btn btn-small"><%=key%></a>
@@ -44,15 +46,15 @@ pageTitle += ' [ ' + config.title + ' ]';
   </div>
 
   <footer class="wgt-footer">
-    <p class="mt0 pb1">
-      &copy; 2014-2017 <%=config.title%> | 
+    <p class="mt0">
+      &copy; 2014-2017 <%=config.title%>
       <% Object.keys(theme.social).forEach(function(key) { %>
-        <a href="<%=theme.social[key]%>"><%=key%></a>&nbsp;|&nbsp;
+        &nbsp;|&nbsp;<a href="<%=theme.social[key]%>"><%=key%></a>
       <% }); %>
     </p>
-    <p class="mt0 pb1">
+    <p class="mt0">
       <% if (theme.license) { %><%=theme.license%><% } %>
-      Powered by <a href="http://hexo.io">Hexo</a>, themed by <a href="#">Paper</a>.
+      Themed by <a href="#">Paper</a>.
     </p>
   </footer>
 </div>
