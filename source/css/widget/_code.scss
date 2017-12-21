@@ -1,0 +1,21 @@
+.highlight{
+  line-height: 1.8;
+  overflow: auto;
+  position: relative;
+  padding: 7px 15px;
+  border-radius: 2px;
+  background: #23241f;
+  margin: 0;
+  .gutter{
+    width: 36px;
+    padding: 0 15px 0 0;
+    text-align: right;
+    color: #8f8f8f;
+    border-right: 1px solid #7c848c;
+  }
+  .code{
+    padding: 0 0 0 15px;
+    color: #2e2e2e;
+    color: #fff;
+  }
+}

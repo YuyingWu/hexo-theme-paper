@@ -20,6 +20,14 @@ a{
     }
   }
 }
+p,
+li{
+  line-height: 1.8;
+}
+@import "_base.scss";
 @import "layout/_archive";
+@import "layout/_recent-posts";
 @import "widget/_footer";
 @import "widget/_pagination";
+@import "widget/_code";
+@import "widget/_content";

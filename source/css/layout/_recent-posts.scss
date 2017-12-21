@@ -1,0 +1,9 @@
+.recent-post-item{
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-color: #eee;
+  &:last-child{
+    border-bottom: 0;
+  }
+}

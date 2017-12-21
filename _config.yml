@@ -5,8 +5,8 @@ language: en
 # main menu navigation
 menu:
   Home: /
-  About: /about
-  Archives: /archives
+  About: /blog/about.html
+  Archives: /blog/archives
 
 social:
   github: https://github.com/YuyingWu
@@ -20,10 +20,11 @@ favicon: /favicon.ico
 
 # stylesheets loaded in the <head>
 stylesheets:
-- /css/paper.lib.css
-- /css/basscss.lib.css
-- /css/index.css
+- /blog/css/paper.lib.css
+- /blog/css/basscss.lib.css
+- /blog/css/index.css
 
 # scripts loaded in the end of the body
 scripts:
-- /js/test.js
+- /blog/js/lazyload.js
+- /blog/js/index.js

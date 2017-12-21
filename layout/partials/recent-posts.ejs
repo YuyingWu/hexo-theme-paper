@@ -2,7 +2,7 @@
 <% if (page.posts.length > 0) { %>
   <div id="recent-posts">
     <% page.posts.sort('date', -1).limit(10).each(function(post) { %>
-      <div class="recent-post-item">
+      <div class="border-dotted recent-post-item">
         <h1 class="mb1 h2">
           <a href="<%=config.root + post.path%>"><%=post.title%></a>
         </h1>
